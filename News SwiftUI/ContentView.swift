@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManager.shared
+    
     var body: some View {
         NavigationView {
-            List(posts) { post in
+            List(networkManager.news) { post in
                 Text(post.title)
             }
 //            .padding()
             .navigationBarTitle("FRESH NEWS")
+        }
+        .onAppear {
+            networkManager.fetchDate()
         }
     }
 }
@@ -25,14 +31,14 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Post: Identifiable {
-    let id: String
-    let title: String
-    
-}
+//struct Post: Identifiable {
+//    let id: String
+//    let title: String
+//
+//}
 
-let posts = [
- Post(id: "1", title: "1"),
- Post(id: "2", title: "2"),
- Post(id: "3", title: "3"),
-]
+//let posts = [
+// Post(id: "1", title: "1"),
+// Post(id: "2", title: "2"),
+// Post(id: "3", title: "3"),
+//]

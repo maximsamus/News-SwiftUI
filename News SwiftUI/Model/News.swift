@@ -6,11 +6,15 @@
 //
 
 struct News: Codable {
-    let hits: [NewsDetail]
+    let hits: [Post]
 }
 
-struct NewsDetail: Codable {
+struct Post: Codable, Identifiable {
+    var id: String {
+        objectID
+    }
     let points: Int
     let title: String
-    let url: String
+    let url: String?
+    let objectID: String
 }

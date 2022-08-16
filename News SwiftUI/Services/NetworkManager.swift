@@ -10,7 +10,12 @@ import Foundation
 
 
 
-class NetworkManager {
+class NetworkManager: ObservableObject {
+    
+    @Published var news = [Post]()
+    static let shared = NetworkManager()
+    
+    private init() {}
     
     func fetchDate() {
         
@@ -21,21 +26,17 @@ class NetworkManager {
                 return
             }
             do {
-                let rickAndMorty = try JSONDecoder().decode(RickAndMorty.self, from: data)
+                let results = try JSONDecoder().decode(News.self, from: data)
                 DispatchQueue.main.async {
-                    completion(rickAndMorty)
+                    self.news = results.hits
                 }
             } catch let error {
                 print(error.localizedDescription)
             }
         }.resume()
     }
-    
-    
 }
 
-
-}
 
 
 
