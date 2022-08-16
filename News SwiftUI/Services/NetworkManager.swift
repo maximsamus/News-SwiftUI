@@ -7,14 +7,10 @@
 
 import Foundation
 
-
-
-
 class NetworkManager: ObservableObject {
     
     @Published var news = [Post]()
     static let shared = NetworkManager()
-    
     private init() {}
     
     func fetchDate() {
@@ -36,7 +32,3 @@ class NetworkManager: ObservableObject {
         }.resume()
     }
 }
-
-
-
-
