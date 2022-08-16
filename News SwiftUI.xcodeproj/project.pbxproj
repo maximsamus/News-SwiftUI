@@ -11,6 +11,8 @@
 		F78DA05628ABB5870074F1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DA05528ABB5870074F1C0 /* ContentView.swift */; };
 		F78DA05828ABB5880074F1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78DA05728ABB5880074F1C0 /* Assets.xcassets */; };
 		F78DA05B28ABB5880074F1C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F78DA05A28ABB5880074F1C0 /* Preview Assets.xcassets */; };
+		F78DA06328ABC1690074F1C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DA06228ABC1690074F1C0 /* NetworkManager.swift */; };
+		F78DA06628ABC7830074F1C0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DA06528ABC7830074F1C0 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F78DA05528ABB5870074F1C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F78DA05728ABB5880074F1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F78DA05A28ABB5880074F1C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F78DA06228ABC1690074F1C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F78DA06528ABC7830074F1C0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		F78DA05228ABB5870074F1C0 /* News SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F78DA06428ABC7770074F1C0 /* Model */,
 				F78DA05328ABB5870074F1C0 /* News_SwiftUIApp.swift */,
 				F78DA05528ABB5870074F1C0 /* ContentView.swift */,
 				F78DA05728ABB5880074F1C0 /* Assets.xcassets */,
 				F78DA05928ABB5880074F1C0 /* Preview Content */,
+				F78DA06128ABC13E0074F1C0 /* Services */,
 			);
 			path = "News SwiftUI";
 			sourceTree = "<group>";
@@ -65,6 +71,22 @@
 				F78DA05A28ABB5880074F1C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F78DA06128ABC13E0074F1C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F78DA06228ABC1690074F1C0 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F78DA06428ABC7770074F1C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F78DA06528ABC7830074F1C0 /* News.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78DA06328ABC1690074F1C0 /* NetworkManager.swift in Sources */,
 				F78DA05628ABB5870074F1C0 /* ContentView.swift in Sources */,
+				F78DA06628ABC7830074F1C0 /* News.swift in Sources */,
 				F78DA05428ABB5870074F1C0 /* News_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
