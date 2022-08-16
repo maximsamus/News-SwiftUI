@@ -2,7 +2,6 @@
 ____
 * Swift 
 * UIKit
-* MVC 
 * WKWebView
 * URLSession
 * Singleton
